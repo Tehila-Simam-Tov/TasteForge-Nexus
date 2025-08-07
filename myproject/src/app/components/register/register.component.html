@@ -1,0 +1,81 @@
+<!-- <input placeholder="name:" [(ngModel)]="newUser.name" name="name"><br>
+<input placeholder="password:" [(ngModel)]="newUser.password" name="pass"><br>
+<button (click)="send()">register</button> -->
+<div class="form">
+      
+    <ul class="tab-group">
+      <li class="tab active">Sign Up</li>
+      
+    </ul>
+    
+    <div class="tab-content">
+      <div id="signup">   
+        <h1>Sign Up </h1>
+        
+        <form action="/" method="post">
+        
+        <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              Full Name<span class="req">*</span>
+            </label>
+            <input  required autocomplete="off" [(ngModel)]="newUser.name" name="name"/>
+          </div>
+      
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off" [(ngModel)]="newUser.password" name="pass"/>
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            address<span class="req" [(ngModel)]="newUser.address" name="address">*</span>
+          </label>
+          <input type="text"required autocomplete="off"/>
+        </div>
+        
+        <div class="field-wrap">
+          <label>
+            Phone<span class="req">*</span>
+          </label>
+          <input type="text"required autocomplete="off" [(ngModel)]="newUser.phone" name="phone"/>
+        </div>
+        
+        <div class="field-wrap">
+          <label>
+            Count of favorite recipes<span class="req" [(ngModel)]="numRecipe" name="numRecipe" (blur)="nameOfRecipes()"></span>
+          </label>
+          <input type="number"required autocomplete="off"/>
+        </div>
+        
+        <!-- @for(r of newUser.nameOfRecipes; track $index){
+            <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              Name favorite recipes <span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off"  name="name"/>
+          </div></div>
+        } -->
+
+        <button type="submit" class="button button-block" (click)="send()">Register</button>
+        
+        </form>
+
+      </div>
+      <!-- ***************************************************** -->
+      <div id="login">   
+        <!-- <h1>Welcome Back!</h1> -->
+        
+        <form action="/" method="post">
+        
+        </form>
+
+      </div>
+      
+    </div><!-- tab-content -->
+    
+</div> <!-- /form -->

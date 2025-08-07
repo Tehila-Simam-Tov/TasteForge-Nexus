@@ -1,0 +1,90 @@
+/* General grid layout for cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start */
+    padding: 30px 20px; /* Padding around grid */
+    background-color: #f3f9f0; /* Light green background */
+}
+
+/* Card styling */
+.card {
+    width: 23%; /* Each card takes up 23% of the container's width */
+    margin: 1%; /* Adding a margin to create space between the cards */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 6px 14px rgba(94, 129, 92, 0.2); /* Subtle shadow */
+    background: #fcfff9; /* Light beige background */
+    overflow: hidden; /* Prevents content overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation transitions */
+    border: 1.5px solid #b8c5a0; /* Green-gray border */
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-6px); /* Lift effect on hover */
+    box-shadow: 0 14px 28px rgba(94, 129, 92, 0.4); /* Darker shadow on hover */
+    border-color: #7d9d66; /* Darker border color on hover */
+}
+
+/* Recipe image styling */
+.card-img-top {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover property to maintain aspect ratio */
+    transition: transform 0.3s ease; /* Scale on hover */
+}
+
+/* Image effect on hover */
+.card:hover .card-img-top {
+    transform: scale(1.06); /* Slightly enlarge image on hover */
+}
+
+/* Card body styling */
+.card-body {
+    padding: 20px; /* Padding inside card */
+    text-align: center; /* Center text */
+}
+
+/* Title styling */
+.card-title {
+    font-size: 1.5rem; /* Font size for title */
+    font-weight: 700; /* Bold title */
+    color: #4d6338; /* Dark green */
+    margin-bottom: 10px; /* Space below title */
+}
+
+/* Level text styling */
+.card-text {
+    font-size: 1rem; /* Font size for text */
+    color: #6e7a5d; /* Gray-green color */
+    margin-bottom: 16px; /* Space below text */
+}
+
+/* Link styling */
+.card-body a {
+    display: inline-block; /* Inline block for anchor */
+    margin-bottom: 12px; /* Space below link */
+    color: #557a46; /* Color for link */
+    font-weight: 600; /* Bold text for link */
+    text-decoration: none; /* Remove underline */
+    border-bottom: 2px solid transparent; /* Underline effect */
+    transition: all 0.2s ease; /* Transition for hover effect */
+}
+
+/* Link hover effect */
+.card-body a:hover {
+    border-color: #557a46; /* Underline on hover */
+    color: #3e5c30; /* Darker color on hover */
+}
+
+/* Favorites button styling */
+.btn-outline-danger {
+    color: #8a2b2b; /* Color for button */
+    border: 1px solid transparent; /* Transparent border */
+    transition: color 0.3s ease; /* Color transition */
+}
+
+/* Hover effect for favorites button */
+.btn-outline-danger:hover {
+    color: #c0392b; /* Change color on hover */
+}

@@ -1,0 +1,58 @@
+<div class="container mt-5">
+    <!-- <form> -->
+        <h3 class="mb-4 text-center">Create a New Recipe</h3>
+        <div class="form-group">
+            <label for="recipeName">Recipe Name</label>
+            <input type="text" class="form-control mb-3" id="recipeName" placeholder="Name Recipe" [(ngModel)]="newRecipe.recipeName" required>
+
+            <label for="img">Image URL</label>
+            <input type="text" class="form-control mb-3" id="img" placeholder="Image URL" [(ngModel)]="newRecipe.img" required>
+
+            <label for="description">Description</label>
+            <input type="text" class="form-control mb-3" id="description" placeholder="Description" [(ngModel)]="newRecipe.description" required>
+            
+            <label for="level">Select Difficulty Level</label>
+            <select id="level" class="form-control mb-3" [(ngModel)]="newRecipe.level" required>
+                <option value="" disabled>Select Level</option>
+                <option value="easy">Easy</option>
+                <option value="middling">Middling</option>
+                <option value="difficult">Difficult</option>
+            </select>
+
+            <label for="timeDuration">Time Duration</label>
+            <input type="text" class="form-control mb-3" id="timeDuration" placeholder="Time Duration" [(ngModel)]="newRecipe.timeDuration" required>
+
+            <label for="kind">Select Kind</label>
+            <select id="kind" class="form-control mb-3" [(ngModel)]="newRecipe.kind" required>
+                <option value="" disabled>Select Kind</option>
+                <option value="parve">Parve</option>
+                <option value="meatly">Meatly</option>
+                <option value="milky">Milky</option>
+            </select>
+        </div>
+
+        <h5 class="mt-4 text-center">Ingredients</h5>
+        <div>
+    @for(c of newRecipe.components; track $index){
+        <input type="text" placeholder="Component Name" [(ngModel)]="c.name"><br>
+        <input type="number" placeholder="Amount" [(ngModel)]="c.amount"><br>
+    }
+</div>
+
+        <button type="button" class="btn btn-secondary mb-3" (click)="addComponent()">Add Component</button>
+        
+        <div class="text-center mb-3">
+            <button type="button" class="btn btn-purple" (click)="addRecipe()">Add Recipe</button>
+        </div>
+    <!-- </form> -->
+</div>
+
+<style>
+.btn-purple {
+    background-color: #800080; /* Purple color */
+    color: white;
+}
+.btn-purple:hover {
+    background-color: #6a007a; /* Darker purple on hover */
+}
+</style>
